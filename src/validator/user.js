@@ -1,1 +1,1 @@
-//this is the user model
+//user model
