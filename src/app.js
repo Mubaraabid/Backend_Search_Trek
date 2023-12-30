@@ -1,5 +1,5 @@
 import express from "express";
-// import mainRouter from "./routes/index.js";
+import mainRouter from "./router/index.js";
 import connectDB from "./config/db.js";
 import env from "dotenv";
 import cors from "cors";
@@ -22,7 +22,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// app.use(mainRouter);
+app.use(mainRouter);
 
 app.listen(process.env.PROJECT_PORT|| 3302, () => {
   console.log(`App is listening on port ${process.env.PROJECT_PORT}`);
